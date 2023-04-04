@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a user</title>
+    <style>
+        * {
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="display: flex; justify-content: center;">
+        <div id="header" style="height: 50px;"></div>
+        <div id="content" style="width: 800px; margin: 20px;">
+            <div id="nav" style="display: flex; justify-content: space-between;">
+                <h1>Add a User</h1>
+                <a href="/">Home</a>
+            </div>
+            <form action="/process" method="post">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="your_first_name">
+                <br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="your_last_name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="your_email">
+                <br>
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

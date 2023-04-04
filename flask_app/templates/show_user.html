@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CRUD: Show User</title>
+    <style>
+        * {
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="display: flex; justify-content: center;">
+        <div id="header" style="height: 50px;"></div>
+        <div id="content" style="width: 800px; margin: 20px;">
+            <div id="nav" style="display: flex; justify-content: space-between;">
+                <h1>User: {{user.id}}</h1>
+                <a href="/">Home</a>
+            </div>
+            <table style="width: 800px;text-align: center;">
+                <thead>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{user.first_name + " " + user.last_name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.created_at}}</td>
+                        <td>{{user.updated_at}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="location.href= '/edit/{{user.id}}'">Edit User</button>
+            <button onclick="location.href= '/delete/{{user.id}}'">Delete User</button>
+        </div>
+    </div>
+</body>
+</html>
