@@ -12,6 +12,9 @@ def add_user():             #redirects to add_user page
 
 @app.route('/process',methods=['POST'])
 def process_new_user():     #adds form data to DB and redirects to individual page
+    if not User.validate_user(request.form):
+        return redirect('/add')
+    
     user = User.create_user(request.form)
     return redirect(f'/show/{user}')
 
